@@ -44,8 +44,21 @@ public class GestorTareas {
      * Marca una tarea como completada usando su índice.
      */
     public void marcarCompletada(int indice) {
-// TODO: Implementar por Miembro 3
-        System.out.println("⚠️ Método marcarCompletada() pendiente de implementación");
+// Validar que el índice sea válido
+        if (indice < 0 || indice >= tareas.size()) {
+            System.out.println("❌ Índice inválido. Debe estar entre 0 y " + (tareas.size() - 1));
+            return;
+        }
+// Obtener la tarea
+        Tarea tarea = tareas.get(indice);
+// Verificar si ya estaba completada
+        if (tarea.isCompletada()) {
+            System.out.println("ℹ️ La tarea ya estaba completada");
+        } else {
+// Marcar como completada
+            tarea.setCompletada(true);
+            System.out.println("✅ Tarea marcada como completada: " + tarea.getDescripcion());
+        }
     }
 // ============================================
 // MÉTODOS PARA MIEMBRO 4: Eliminar y persistencia
