@@ -34,8 +34,21 @@ public class GestorTareas {
      * Muestra todas las tareas en pantalla.
      */
     public void listarTareas() {
-// TODO: Implementar por Miembro 2
-        System.out.println("⚠️ Método listarTareas() pendiente de implementación");
+// Verificar si hay tareas
+        if (tareas.isEmpty()) {
+            System.out.println("\n📭 No hay tareas registradas");
+            return;
+        }
+// Mostrar encabezado
+        System.out.println("\n📋 LISTA DE TAREAS");
+        System.out.println("━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━");
+// Recorrer y mostrar cada tarea con su índice
+        for (int i = 0; i < tareas.size(); i++) {
+            System.out.println("[" + i + "] " + tareas.get(i).toString());
+        }
+// Mostrar pie
+        System.out.println("━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━");
+        System.out.println("Total: " + tareas.size() + " tarea(s)");
     }
 // ============================================
 // MÉTODO PARA MIEMBRO 3: Marcar completada
