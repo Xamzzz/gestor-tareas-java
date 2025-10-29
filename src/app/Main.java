@@ -25,7 +25,7 @@ public class Main {
             switch (opcion) {
                 case 1:
 // TODO: Implementar por Miembro 1
-                    System.out.println("\n🔨 Funcionalidad 'Agregar tarea' en desarrollo...");
+                    gestor.listarTareas();
                     break;
                 case 2:
 // TODO: Implementar por Miembro 2
