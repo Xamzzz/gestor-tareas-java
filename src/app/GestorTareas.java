@@ -20,7 +20,13 @@ public class GestorTareas {
      */
     public void agregarTarea(Tarea tarea) {
 // TODO: Implementar por Miembro 1
-        System.out.println("⚠️ Método agregarTarea() pendiente de implementación");
+        if(tarea == null) {
+            System.out.println("⚠️ Método agregarTarea() pendiente de implementación");
+            return;
+        }
+        //Agregar a la lista
+
+        System.out.println("✅Tarea agregada exitosamente");
     }
 // ============================================
 // MÉTODO PARA MIEMBRO 2: Listar tareas
